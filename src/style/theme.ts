@@ -28,7 +28,13 @@ export const theme = {
     h6: { fontSize: 'md', lineHeight: 1.4 },
     p: { fontSize: 'base', lineHeight: 1.2 },
     span: { fontSize: 'base', lineHeight: 1.2 }
-  } as const
+  } as const,
+  space: {
+    sm: 4,
+    md: 8,
+    lg: 12
+  },
+  radii: [5, 10, 20, 50]
 }
 
 export type Theme = typeof theme
@@ -38,3 +44,5 @@ export type ThemeColors = keyof Theme['colors']
 export type ThemeFontSizes = keyof Theme['fontSizes']
 
 export type TextVariants = keyof Theme['textVariants']
+
+export type ThemeSpace = keyof Theme['space']
