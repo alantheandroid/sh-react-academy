@@ -11,7 +11,7 @@ export const Text = ({
   children,
   variant = 'p',
   size,
-  color = 'textDark',
+  color,
   lineHeight = 1.2,
   bold = false,
   uppercase = false

@@ -4,14 +4,14 @@ import { theme, TextVariants, ThemeColors } from '../../style/theme'
 export type StyledTextProps = {
   as: TextVariants
   size?: number
-  color: ThemeColors
+  color?: ThemeColors
   lineHeight: number
   bold: Boolean
   uppercase?: Boolean
 }
 
 export const StyledText = styled.p<StyledTextProps>`
-  color: ${({ theme, color }) => theme.colors[color]};
+  color: ${({ theme, color }) => (color ? theme.colors[color] : 'inherit')};
   font-size: ${({ theme, as, size }) => {
     if (size) {
       return size
